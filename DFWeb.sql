@@ -1,6 +1,6 @@
 BEGIN TRANSACTION
 
 UPDATE NotebookBlank
-SET ALLOCATED = NotebookFilled.ALLOCATED
-FROM NotebookBlank as T2
-    WHERE NotebookFilled.MPAN = T2.MPAN
+SET ALLOCATED = NotebookFilled
+FROM NotebookFilled as T2
+    WHERE NotebookBlank.MPAN = T2.MPAN
